@@ -17,32 +17,37 @@
                 style="background-color: rgba(128, 128, 128, 0.233); height: 650px;">
                 <div class="text-center" style="background-color: #f888c0">
                 </div>
-                <form id="formregister" class="form" style="background-color: #7cc7d1">
+                <form id="formregister" class="form" style="background-color: #7cc7d1" action="" method="POST">
                     <h3 class="text-primary text-center">Registrar usuario</h3>
+                    <?php
+                        include("conexion2.php");
+                        include("registrar_usuario.php");
+                    ?>
                     <div class=" p-4">
                         <div class="input-group mb-3">
-                            <input type="username" class="form-control border-dark" placeholder="Usuario" name="name"
-                                id="name" required />
+                            <input type="text" class="form-control border-dark" placeholder="Nombre" name="nombre"
+                                required />
 
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="email" class="form-control border-dark" placeholder="Correo" name="email"
-                                id="email" required />
+                            <input type="email" class="form-control border-dark" placeholder="Correo" name="correo"
+                                required />
 
                         </div>
 
                         <div class="input-group mb-3">
                             <input type="password" class="form-control border-dark" placeholder="Contraseña"
-                                name="password" id="password" required />
+                                name="contraseña" required />
 
                         </div>
 
                         <div class="text-center">
-                            <button onclick="saveUser()" class="btnCrear">Crear</button>
+                            <input type="submit" class="btnCrear" value="Crear" name="Nuevo">
+
                         </div>
                         <p class="text-center mt-2">¿Ya tienes una cuenta?
-                            <a href="login.html">Iniciar sesión</a>
+                            <a href="iniciosesion.php">Iniciar sesión</a>
                         </p>
 
                     </div>
